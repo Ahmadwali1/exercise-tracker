@@ -6,10 +6,14 @@ module.exports = {
   index
 }
 
-function index(req,res) {
-  res.render('exercises/index', {
-    exercise: Exercise.getAll()
-  })
+async function index(req,res) {
+  try {
+    const exercises = await Exercise.find({});
+    res.render('exercises/index', {exercises})
+
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 async function create(req, res) {

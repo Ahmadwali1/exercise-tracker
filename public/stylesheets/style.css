@@ -1,12 +1,8 @@
-
-
-
 body {
   align-items: center;
   min-height: 100vh;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  
 }
 
 a {
@@ -40,12 +36,24 @@ a {
   /*background-color: linear-gradient(45deg, #4f1919, #ff3333);*/
   background-color: wheat;
   border-radius: 8px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.nav a:nth-child(1):hover~span{
+.nav a:nth-child(1):hover ~ span {
   left: 0;
 }
-.nav a:nth-child(2):hover~span{
+.nav a:nth-child(2):hover ~ span {
   left: 95px;
+  width: 110px;
+}
+.nav a:nth-child(3):hover ~ span {
+  left: 230px;
+  width: 110px;
+}
+
+#home {
+  background-image: url("/images/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }

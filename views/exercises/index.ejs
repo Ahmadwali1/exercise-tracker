@@ -11,22 +11,14 @@
   </thead>
   <tbody>
     <% exercises.forEach(function(e) { %>
-      <tr>
-        <td><%= e.date%></td>
-        <td><%= e.day%></td>
-        <td><%= e.bodyPart%></td>
-      </tr>
-
+    <tr>
+      <td><%= e.date?.toLocaleDateString()%></td>
+      <td><%= e.day%></td>
+      <td><%= e.bodyPart%></td>
+    </tr>
 
     <% })%>
   </tbody>
 </table>
-
-
-
-
-
-
-
 
 <%- include('../partials/footer')%>
