@@ -1,0 +1,32 @@
+<%- include('../partials/header')%>
+
+<h2>EXERCISE LIST</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Day</th>
+      <th>Body Part</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% exercises.forEach(function(e) { %>
+      <tr>
+        <td><%= e.date%></td>
+        <td><%= e.day%></td>
+        <td><%= e.bodyPart%></td>
+      </tr>
+
+
+    <% })%>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+<%- include('../partials/footer')%>
