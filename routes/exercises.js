@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const exercisesCtrl = require('../controllers/exercises');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
+// Get /exercises/new
+router.get('/new', exercisesCtrl.new);
 module.exports = router;
