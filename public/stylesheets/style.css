@@ -1,8 +1,51 @@
+
+
+
 body {
+  align-items: center;
+  min-height: 100vh;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
 }
 
 a {
-  color: #00B7FF;
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 23px;
+  z-index: 1;
+}
+
+.nav {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: #222;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  border-radius: 20%;
+}
+
+.nav span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95px;
+  height: 100%;
+  /*background-color: linear-gradient(45deg, #4f1919, #ff3333);*/
+  background-color: wheat;
+  border-radius: 8px;
+  transition: .5s;
+}
+
+.nav a:nth-child(1):hover~span{
+  left: 0;
+}
+.nav a:nth-child(2):hover~span{
+  left: 95px;
 }
