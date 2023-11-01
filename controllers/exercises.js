@@ -3,7 +3,13 @@ const Exercise = require('../models/exercise');
 module.exports = {
   new: newExercise,
   create,
-  index
+  index,
+  show
+}
+
+async function show(req, res) {
+  const exercise = await Exercise.findById(req.params.id);
+  res.render('/exercises/show', {exercise});
 }
 
 async function index(req,res) {
