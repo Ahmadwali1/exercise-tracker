@@ -6,6 +6,9 @@ const exercisesCtrl = require('../controllers/exercises');
 // Get /exercises/new
 router.get('/new', exercisesCtrl.new);
 
+//get /exercises/:id
+router.get('/:id', exercisesCtrl.show);
+
 // post / exerciese
 
 router.post('/', exercisesCtrl.create);
