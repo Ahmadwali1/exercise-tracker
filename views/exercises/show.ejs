@@ -1,13 +1,90 @@
 <%- include('../partials/header')%>
 
-
-
-
-
-
-
-
-
-
+<h2>ADD WORKOUTS</h2>
+<form action="/exercises/<%= exercise._id%>/workouts" method="POST">
+  <label
+    >LegExercises:
+    <select name="legExercises">
+      <option value="Squats">Squats</option>
+      <option value="Deadlifts">Deadlifts</option>
+      <option value="Lunges">Lunges</option>
+      <option value="Leg Press">Leg Press</option>
+      <option value="Leg Extensions">Leg Extensions</option>
+      <option value="Leg Curls">Leg Curls</option>
+      <option value="Calf Raises">Calf Raises</option>
+    </select> </label
+  ><br />
+  <label
+    >ChestExercises:
+    <select name="chestExercises">
+      <option value="Bench Press">Bench Press</option>
+      <option value="Dumbbell Bench Press">Dumbbell Bench Press</option>
+      <option value="Incline Bench Press">Incline Bench Press</option>
+      <option value="Chest Flyes">Chest Flyes</option>
+      <option value="Push-Ups">Push-Ups</option>
+      <option value="Cable Crossovers"></option>
+    </select> </label
+  ><br />
+  <label
+    >ShoulderExercises:
+    <select name="shoulderExercises">
+      <option value="Overhead Press">Overhead Press</option>
+      <option value="Dumbbell Shoulder Press">Dumbbell Shoulder Press</option>
+      <option value="Lateral Raises">Lateral Raises</option>
+      <option value="Front Raises">Front Raises</option>
+    </select> </label
+  ><br />
+  <label
+    >ArmExercises:
+    <select name="armExercises">
+      <option value="Bicep Curls">Bicep Curls</option>
+      <option value="Hammer Curls">Hammer Curls</option>
+      <option value="Tricep Dips">Tricep Dips</option>
+      <option value="Tricep Extensions">Tricep Extensions</option>
+      <option value="Pushdowns">Pushdowns</option>
+      <option value="Cable Curls">Cable Curls</option>
+    </select> </label
+  ><br />
+  <label
+    >AbdominalExercises:
+    <select name="abdominalExercises">
+      <option value="Crunches">Crunches</option>
+      <option value="Leg Raises">Leg Raises</option>
+      <option value="Planks">Planks</option>
+      <option value="Russian Twists"></option>
+      <option value="Cable Crunches"></option>
+      <option value="Hanging Leg Raises">Hanging Leg Raises</option>
+      <option value="Ab Rollouts">Ab Rollouts</option>
+    </select> </label
+  ><br />
+  <label
+    >CardioExercises:
+    <select name="cardioExercises">
+      <option value="Treadmill">Treadmill</option>
+      <option value="Stationary Bike">Stationary Bike</option>
+      <option value="Stair Climber">Stair Climber</option>
+      <option value="Jump Rope">Jump Rope</option>
+    </select> </label
+  ><br />
+  <label
+    >Weight:
+    <input type="number" name="weight" /> </label
+  ><br />
+  <label
+    >UnitSystems:
+    <select name="unitSystems">
+      <option value="Kg">Kg</option>
+      <option value="Lb">Lb</option>
+    </select> </label
+  ><br />
+  <label
+    >Sets:
+    <input type="number" name="sets" /> </label
+  ><br />
+  <label
+    >Reps:
+    <input type="number" name="reps" /> </label
+  ><br />
+</form>
 
 <%- include('../partials/footer')%>

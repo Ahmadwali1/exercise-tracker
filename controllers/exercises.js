@@ -9,7 +9,7 @@ module.exports = {
 
 async function show(req, res) {
   const exercise = await Exercise.findById(req.params.id);
-  res.render('/exercises/show', {exercise});
+  res.render('exercises/show', {exercise});
 }
 
 async function index(req,res) {
