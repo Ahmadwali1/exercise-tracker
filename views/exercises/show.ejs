@@ -66,10 +66,7 @@
       <option value="Jump Rope">Jump Rope</option>
     </select> </label
   ><br />
-  <label
-    >Weight:
-    <input type="number" name="weight" /> </label
-  ><br />
+  <label>Weight: <input type="number" name="weight" /> </label><br />
   <label
     >UnitSystems:
     <select name="unitSystems">
@@ -77,14 +74,47 @@
       <option value="Lb">Lb</option>
     </select> </label
   ><br />
-  <label
-    >Sets:
-    <input type="number" name="sets" /> </label
-  ><br />
-  <label
-    >Reps:
-    <input type="number" name="reps" /> </label
-  ><br />
+  <label>Sets: <input type="number" name="sets" /> </label><br />
+  <label>Reps: <input type="number" name="reps" /> </label><br />
+  <input type="submit" value="ADD WORKOUTS" />
 </form>
 
-<%- include('../partials/footer')%>
+<% if(exercise.workouts.length) { %>
+<table>
+  <thead>
+    <tr>
+      <th>legExercises</th>
+      <th>chestExercises</th>
+      <th>shoulderExercises</th>
+      <th>armExercises</th>
+      <th>abdominalExercises</th>
+      <th>cardioExercises</th>
+      <th>weight</th>
+      <th>unitSystems</th>
+      <th>sets</th>
+      <th>reps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% exercise.workouts.forEach(function(w){ %>
+    <tr>
+      <td><%=w.legExercises%></td>
+      <td><%=w.chestExercises%></td>
+      <td><%=w.shoulderExercises%></td>
+      <td><%=w.armExercises%></td>
+      <td><%=w.abdominalExercises%></td>
+      <td><%=w.cardioExercises%></td>
+      <td><%=w.weight%></td>
+      <td><%=w.unitSystems%></td>
+      <td><%=w.sets%></td>
+      <td><%=w.reps%></td>
+    </tr>
+
+    <% })%>
+  </tbody>
+</table>
+
+<%} else { %>
+<h5>No workouts</h5>
+
+<%}%> <%- include('../partials/footer')%>
