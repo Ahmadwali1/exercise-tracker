@@ -19,5 +19,8 @@ router.get('/', exercisesCtrl.index);
 //delete /exercises/:id
 router.delete('/:id', exercisesCtrl.delete);
 
+//get /exercises/:id/edit
+router.get('/:id/edit', exercisesCtrl.new)
+
 
 module.exports = router;
