@@ -57,3 +57,9 @@ a {
   background-size: cover;
   height: 100vh;
 }
+
+.delete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

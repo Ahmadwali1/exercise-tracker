@@ -16,5 +16,8 @@ router.post('/', exercisesCtrl.create);
 //Get routes for exercises
 router.get('/', exercisesCtrl.index);
 
+//delete /exercises/:id
+router.delete('/:id', exercisesCtrl.delete);
+
 
 module.exports = router;
