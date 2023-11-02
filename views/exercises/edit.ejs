@@ -1,0 +1,29 @@
+<%- include('../partials/header')%>
+
+<h2>ADD A NEW EXERCISE</h2>
+<form action="/exercises" method="POST">
+  <label>Date: <input type="date" name="date" /> </label><br />
+  <label
+    >Day
+    <select name="day" id="day">
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select> </label
+  ><br />
+  <label
+    >Body Part
+    <select name="bodyPart" id="Bodypart">
+      <option value="Upper Body">Upper Body</option>
+      <option value="Lower Body">Lower Body</option>
+    </select> </label
+  ><br />
+  <button type="submit">Add exercise</button>
+</form>
+<p><%= errorMsg%></p>
+
+<%- include('../partials/footer')%>
