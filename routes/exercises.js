@@ -23,7 +23,7 @@ router.delete('/:id', exercisesCtrl.delete);
 router.get('/:id/edit', exercisesCtrl.edit);
 
 //Put /exercises/:id/update
-router.put('/exercises/:id/update', exercisesCtrl.update);
+router.put('/:id', exercisesCtrl.update);
 
 
 module.exports = router;

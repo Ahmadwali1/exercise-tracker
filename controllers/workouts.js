@@ -1,11 +1,11 @@
-const Exercise = require('../models/exercise');
+const Exercise = require("../models/exercise");
 
 module.exports = {
   create,
-  delete: deleteWorkout
-}
+  delete: deleteWorkout,
+};
 
-async function create(req,res) {
+async function create(req, res) {
   const exercise = await Exercise.findById(req.params.id);
   exercise.workout.push(req.body);
   try {
@@ -18,10 +18,10 @@ async function create(req,res) {
 
 async function deleteWorkout(req, res) {
   try {
-    const deleteW = await Exercise.findOne({ 'workout._id': req.params.id});
+    const deleteW = await Exercise.findOne({ "workout._id": req.params.id });
     deleteW.workout.remove(req.params.id);
     await deleteW.save();
-    res.redirect("/exercises");
+    res.redirect(`/exercises/${deleteW._id}`);
   } catch (err) {
     console.log(err);
   }

@@ -5,6 +5,7 @@
   <label
     >LegExercises:
     <select name="legExercises">
+      <option value="">Select</option>
       <option value="Squats">Squats</option>
       <option value="Deadlifts">Deadlifts</option>
       <option value="Lunges">Lunges</option>
@@ -17,6 +18,7 @@
   <label
     >ChestExercises:
     <select name="chestExercises">
+      <option value="">Select</option>
       <option value="Bench Press">Bench Press</option>
       <option value="Dumbbell Bench Press">Dumbbell Bench Press</option>
       <option value="Incline Bench Press">Incline Bench Press</option>
@@ -28,6 +30,7 @@
   <label
     >ShoulderExercises:
     <select name="shoulderExercises">
+      <option value="">Select</option>
       <option value="Overhead Press">Overhead Press</option>
       <option value="Dumbbell Shoulder Press">Dumbbell Shoulder Press</option>
       <option value="Lateral Raises">Lateral Raises</option>
@@ -37,6 +40,7 @@
   <label
     >ArmExercises:
     <select name="armExercises">
+      <option value="">Select</option>
       <option value="Bicep Curls">Bicep Curls</option>
       <option value="Hammer Curls">Hammer Curls</option>
       <option value="Tricep Dips">Tricep Dips</option>
@@ -48,6 +52,7 @@
   <label
     >AbdominalExercises:
     <select name="abdominalExercises">
+      <option value="">Select</option>
       <option value="Crunches">Crunches</option>
       <option value="Leg Raises">Leg Raises</option>
       <option value="Planks">Planks</option>
@@ -60,6 +65,7 @@
   <label
     >CardioExercises:
     <select name="cardioExercises">
+      <option value="">Select</option>
       <option value="Treadmill">Treadmill</option>
       <option value="Stationary Bike">Stationary Bike</option>
       <option value="Stair Climber">Stair Climber</option>
@@ -70,6 +76,7 @@
   <label
     >UnitSystems:
     <select name="unitSystems">
+      <option value="">Select</option>
       <option value="Kg">Kg</option>
       <option value="Lb">Lb</option>
     </select> </label
@@ -83,12 +90,13 @@
 <table>
   <thead>
     <tr>
-      <th>legExercises</th>
+      <!-- <th>legExercises</th>
       <th>chestExercises</th>
       <th>shoulderExercises</th>
       <th>armExercises</th>
       <th>abdominalExercises</th>
-      <th>cardioExercises</th>
+      <th>cardioExercises</th> -->
+      <th>Exercises</th>
       <th>weight</th>
       <th>unitSystems</th>
       <th>sets</th>
@@ -98,12 +106,19 @@
   <tbody>
     <% exercise.workout.forEach(function(w){ %>
     <tr>
-      <td><%=w.legExercises%></td>
-      <td><%=w.chestExercises%></td>
-      <td><%=w.shoulderExercises%></td>
-      <td><%=w.armExercises%></td>
-      <td><%=w.abdominalExercises%></td>
-      <td><%=w.cardioExercises%></td>
+      <td>
+        <%=w.legExercises%> 
+        
+        <%=w.chestExercises%> 
+        
+        <%=w.shoulderExercises%> 
+        
+        <%=w.armExercises%> 
+        
+        <%=w.abdominalExercises%> 
+        
+        <%=w.cardioExercises%> 
+      </td>
       <td><%=w.weight%></td>
       <td><%=w.unitSystems%></td>
       <td><%=w.sets%></td>

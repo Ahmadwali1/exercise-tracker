@@ -12,8 +12,8 @@ module.exports = {
 
 async function update(req, res) {
   try {
-    const exercise = Exercise.Update(req.params.id, req.body);
-    res.redirect(`/exercises/${req.params.id}`, { exercise });
+    const exercise = Exercise.findByIdAndUpdate(req.params.id, req.body);
+    res.redirect(`/exercises/${req.params.id}`);
   } catch (err) {
     console.log(err);
   }
