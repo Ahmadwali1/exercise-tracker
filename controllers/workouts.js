@@ -6,7 +6,7 @@ module.exports = {
 
 async function create(req,res) {
   const exercise = await Exercise.findById(req.params.id);
-  exercise.workouts.push(req.body);
+  exercise.workout.push(req.body);
   try {
     await exercise.save();
   } catch (err) {

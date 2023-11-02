@@ -51,8 +51,8 @@
       <option value="Crunches">Crunches</option>
       <option value="Leg Raises">Leg Raises</option>
       <option value="Planks">Planks</option>
-      <option value="Russian Twists"></option>
-      <option value="Cable Crunches"></option>
+      <option value="Russian Twists">Russian Twists</option>
+      <option value="Cable Crunches">Cable Crunches</option>
       <option value="Hanging Leg Raises">Hanging Leg Raises</option>
       <option value="Ab Rollouts">Ab Rollouts</option>
     </select> </label
@@ -79,7 +79,7 @@
   <input type="submit" value="ADD WORKOUTS" />
 </form>
 
-<% if(exercise.workouts.length) { %>
+<% if(exercise.workout.length) { %>
 <table>
   <thead>
     <tr>
@@ -96,7 +96,7 @@
     </tr>
   </thead>
   <tbody>
-    <% exercise.workouts.forEach(function(w){ %>
+    <% exercise.workout.forEach(function(w){ %>
     <tr>
       <td><%=w.legExercises%></td>
       <td><%=w.chestExercises%></td>

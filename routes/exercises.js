@@ -16,4 +16,5 @@ router.post('/', exercisesCtrl.create);
 //Get routes for exercises
 router.get('/', exercisesCtrl.index);
 
+
 module.exports = router;
