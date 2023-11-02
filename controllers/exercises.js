@@ -6,11 +6,25 @@ module.exports = {
   index,
   show,
   delete: deleteExercise,
+  edit,
 };
 
-function deleteExercise(req, res) {
-  Exercise.deleteOne(req.params.id);
-  res.redirect("/exercises");
+async function edit(req, res) {
+  try {
+    const exercise = await Exercise.findById(req.params.id);
+    res.render("exercises/edit", {exercise});
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+async function deleteExercise(req, res) {
+  try {
+    const deleteE = await Exercise.findByIdAndDelete(req.params.id);
+    res.redirect("/exercises");
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 async function show(req, res) {
