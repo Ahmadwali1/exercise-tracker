@@ -7,12 +7,22 @@ module.exports = {
   show,
   delete: deleteExercise,
   edit,
+  update,
 };
+
+async function update(req, res) {
+  try {
+    const exercise = Exercise.Update(req.params.id, req.body);
+    res.redirect(`/exercises/${req.params.id}`, { exercise });
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 async function edit(req, res) {
   try {
     const exercise = await Exercise.findById(req.params.id);
-    res.render("exercises/edit", {exercise});
+    res.render("exercises/edit", { exercise });
   } catch (err) {
     console.log(err);
   }

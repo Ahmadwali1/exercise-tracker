@@ -22,7 +22,7 @@
       <option value="Incline Bench Press">Incline Bench Press</option>
       <option value="Chest Flyes">Chest Flyes</option>
       <option value="Push-Ups">Push-Ups</option>
-      <option value="Cable Crossovers"></option>
+      <option value="Cable Crossovers">Cable Crossovers</option>
     </select> </label
   ><br />
   <label
@@ -108,6 +108,15 @@
       <td><%=w.unitSystems%></td>
       <td><%=w.sets%></td>
       <td><%=w.reps%></td>
+      <td>
+        <form
+          action="/exercises/<%= w._id%>/workouts?_method=DELETE"
+          method="POST"
+          class="delete"
+        >
+          <button type="submit">x</button>
+        </form>
+      </td>
     </tr>
 
     <% })%>

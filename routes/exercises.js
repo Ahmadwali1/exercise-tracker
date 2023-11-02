@@ -20,7 +20,10 @@ router.get('/', exercisesCtrl.index);
 router.delete('/:id', exercisesCtrl.delete);
 
 //get /exercises/:id/edit
-router.get('/:id/edit', exercisesCtrl.edit)
+router.get('/:id/edit', exercisesCtrl.edit);
+
+//Put /exercises/:id/update
+router.put('/exercises/:id/update', exercisesCtrl.update);
 
 
 module.exports = router;

@@ -1,11 +1,13 @@
 <%- include('../partials/header')%>
 
-<h2>ADD A NEW EXERCISE</h2>
-<form action="/exercises" method="POST">
-  <label>Date: <input type="date" name="date" /> </label><br />
+<h2>EDIT EXERCISE</h2>
+<form action="/exercises/<%=exercise._id%>?_method=PUT" method="POST">
+  <label
+    >Date: <input type="date" name="date" value="<%=exercise.date%>" /> </label
+  ><br />
   <label
     >Day
-    <select name="day" id="day">
+    <select name="day" id="day" value="<%=exercise.day%>">
       <option value="Monday">Monday</option>
       <option value="Tuesday">Tuesday</option>
       <option value="Wednesday">Wednesday</option>
@@ -17,13 +19,12 @@
   ><br />
   <label
     >Body Part
-    <select name="bodyPart" id="Bodypart">
+    <select name="bodyPart" id="Bodypart" value="<%+exercise.bodyPart%>">
       <option value="Upper Body">Upper Body</option>
       <option value="Lower Body">Lower Body</option>
     </select> </label
   ><br />
-  <button type="submit">Add exercise</button>
+  <button type="submit">UPDATE EXERCISE</button>
 </form>
-<p><%= errorMsg%></p>
 
 <%- include('../partials/footer')%>
