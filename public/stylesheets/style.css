@@ -102,51 +102,117 @@ a {
   letter-spacing: 1px;
 }
 /* new ejs style*/
-form {
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #fff; /* White text for headings */
+  margin-top: 20px;
+  padding-top: 10%;
+}
+
+form.new {
   max-width: 300px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: #333; /* Dark background color */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: #fff; /* White text for form elements */
+  transform: translateY(0);
+  transition: transform 0.3s, box-shadow 0.3s; /* Add smooth transitions */
 }
 
-label {
+.new:hover {
+  transform: translateY(-10px); /* Move the form up on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Shadow increase on hover */
+}
+
+.newlabel {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-input[type="date"],
-select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-}
-
-
-form #update {
-  display: block;
+.newdate,
+.newselect {
   width: 100%;
   padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #222; /* Dark background for input fields */
+  color: #fff; /* White text for input fields */
+}
+
+#update {
+  display: block;
+  width: 100%;
+  padding: 12px;
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
+#update:hover {
   background-color: #0056b3;
+  transform: scale(1.05); /* Slight scale increase on hover */
 }
 
-p {
+/*index.ejs style*/
+h2 {
   text-align: center;
-  color: red;
-  margin-top: 10px;
+  font-size: 24px;
+  color: #fff; /* White text for headings */
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+thead {
+  background-color: #333; /* Dark background color for the header */
+  color: white;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #444; /* Slightly lighter border color */
+  position: relative;
+  color: #fff; /* White text for table cells */
+}
+
+th button {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+
+tr {
+  position: relative;
+  transition: transform 0.2s;
+}
+
+tr:hover {
+  background-color: #444; /* Slightly lighter background color on hover */
+  transform: translateY(-5px); /* Move the row up on hover */
+}
+
+tr:hover th button {
+  display: block;
+  z-index: 1;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-left: 10px;
 }

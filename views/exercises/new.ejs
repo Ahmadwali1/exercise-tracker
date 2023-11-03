@@ -1,11 +1,11 @@
 <%- include('../partials/header')%>
 
 <h2>ADD A NEW EXERCISE</h2>
-<form action="/exercises" method="POST">
-  <label>Date: <input type="date" name="date" /> </label><br />
-  <label
+<form class="new" action="/exercises" method="POST">
+  <label class="newlabel">Date: <input class="newdate"  type="date" name="date" /> </label><br />
+  <label class="newlabel"
     >Day
-    <select name="day" id="day">
+    <select name="day" class="newselect">
       <option value="Monday">Monday</option>
       <option value="Tuesday">Tuesday</option>
       <option value="Wednesday">Wednesday</option>
@@ -15,9 +15,9 @@
       <option value="Sunday">Sunday</option>
     </select> </label
   ><br />
-  <label
+  <label class="newlabel"
     >Body Part
-    <select name="bodyPart" id="Bodypart">
+    <select name="bodyPart" class="newselect">
       <option value="Upper Body">Upper Body</option>
       <option value="Lower Body">Lower Body</option>
     </select> </label

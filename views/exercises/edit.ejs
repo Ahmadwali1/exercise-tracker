@@ -1,13 +1,14 @@
 <%- include('../partials/header')%>
 
 <h2>EDIT EXERCISE</h2>
-<form action="/exercises/<%=exercise._id%>?_method=PUT" method="POST">
+<form class="new" action="/exercises/<%=exercise._id%>?_method=PUT" method="POST">
   <label
-    >Date: <input type="date" name="date" value="<%=exercise.date%>" /> </label
+    >Date   <input class="newdate" type="date" name="date" value="<%=exercise.date%>" /> </label
   ><br />
   <label
     >Day
-    <select name="day" id="day" value="<%=exercise.day%>">
+
+    <select name="day" class="newselect" value="<%=exercise.day%>">
       <option value="Monday">Monday</option>
       <option value="Tuesday">Tuesday</option>
       <option value="Wednesday">Wednesday</option>
@@ -19,7 +20,8 @@
   ><br />
   <label
     >Body Part
-    <select name="bodyPart" id="Bodypart" value="<%+exercise.bodyPart%>">
+
+    <select name="bodyPart" class="newselect" value="<%+exercise.bodyPart%>">
       <option value="Upper Body">Upper Body</option>
       <option value="Lower Body">Lower Body</option>
     </select> </label
