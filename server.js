@@ -30,7 +30,10 @@ app.use(session({
   secret: process.env.SECRET,
   resave:false,
   saveUninitialized: true
-}))
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(methodOverride('_method'));
 app.use('/', indexRouter);
