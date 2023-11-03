@@ -6,25 +6,24 @@ body {
   background-image: url("/images/pose-muscle-muscle-rod-press-hd-wallpaper-preview.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
 }
 
 /* navbar*/
 .navbar {
-  background-color: radial-gradient(#ea4056,#3D2200);
+  background-color: radial-gradient(#ea4056, #3d2200);
   /*background: #1b1b1b;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px 0px;
+  text-align: center;
 }
 
 .navbar a {
   text-decoration: none;
   font-size: 18px;
   color: #f3f3f3;
-  margin: 0 20px;
-  position: relative;
+  margin: 0 auto;
   transition: all 0.3s;
 }
 

@@ -6,17 +6,17 @@ const exercisesCtrl = require('../controllers/exercises');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 // Get /exercises/new
-router.get('/new',ensureLoggedIn, exercisesCtrl.new);
+router.get('/new', exercisesCtrl.new);
 
 //get /exercises/:id
-router.get('/:id',ensureLoggedIn, exercisesCtrl.show);
+router.get('/:id',exercisesCtrl.show);
 
 // post / exerciese
 
 router.post('/',ensureLoggedIn, exercisesCtrl.create);
 
 //Get routes for exercises
-router.get('/',ensureLoggedIn, exercisesCtrl.index);
+router.get('/', exercisesCtrl.index);
 
 //delete /exercises/:id
 router.delete('/:id',ensureLoggedIn, exercisesCtrl.delete);
