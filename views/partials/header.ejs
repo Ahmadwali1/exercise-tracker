@@ -10,9 +10,17 @@
   <body>
     <nav class="nav">
       <a href="/">Home</a>
+      <%if (user) { %>
+
       <a href="/exercises/new">Add Exercise</a>
       <a href="/exercises">All Exercises</a>
+
+      <% } else { %>
+
       <a href="/auth/google">LOG IN</a>
+
+      <% }%>
+
       <span></span>
     </nav>
   </body>
