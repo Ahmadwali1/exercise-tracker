@@ -162,63 +162,75 @@ form.new {
 }
 
 /*index.ejs style*/
-h2 {
+/* Style for the exercise table */
+.exercise-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #222;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
   text-align: center;
-  font-size: 24px;
-  color: #fff; /* White text for headings */
+  margin: 0 auto;
   margin-top: 20px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
-
-thead {
-  background-color: #333; /* Dark background color for the header */
-  color: white;
-}
-
-th,
-td {
+.exercise-table th {
+  background-color: #444;
+  color: #fff;
   padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #444; /* Slightly lighter border color */
-  position: relative;
-  color: #fff; /* White text for table cells */
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
-th button {
-  display: none;
-  position: absolute;
-  right: 0;
+.exercise-table th,
+.exercise-table td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
 }
 
-tr {
-  position: relative;
-  transition: transform 0.2s;
-}
-
-tr:hover {
-  background-color: #444; /* Slightly lighter background color on hover */
-  transform: translateY(-5px); /* Move the row up on hover */
-}
-
-tr:hover th button {
+/* Style for links and buttons */
+.details-link,
+.edit-link {
   display: block;
-  z-index: 1;
-  background-color: #007bff;
-  color: white;
+  text-decoration: none;
+  background-color: #444;
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  margin: 5px auto;
+  border-radius: 3px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.delete-button {
+  background-color: #f00;
+  color: #fff;
+  padding: 5px 10px;
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  padding: 5px 10px;
-  margin-left: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Animation on hover */
+.details-link:hover,
+.edit-link:hover,
+.delete-button:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
+
+/* Animation on table rows */
+.exercise-table tr {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.exercise-table tr:hover {
+  background-color: #333;
+  transform: translateY(-3px);
 }
 
 /*show.ejs style*/
-/* Add your CSS styles here *//* Add your CSS styles here */
 .workout {
   display: flex;
   flex-wrap: wrap;
@@ -248,7 +260,8 @@ tr:hover th button {
   flex-direction: column;
 }
 
-.select-container select, .input-container input {
+.select-container select,
+.input-container input {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
@@ -258,7 +271,8 @@ tr:hover th button {
   color: #fff;
 }
 
-.select-container label, .input-container label {
+.select-container label,
+.input-container label {
   color: #fff;
   margin-bottom: 5px;
 }
@@ -287,7 +301,8 @@ tr:hover th button {
   margin-top: 20px;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #444;

@@ -1,7 +1,7 @@
 <%- include('../partials/header')%>
 
-<h2>EXERCISE LIST</h2>
-<table>
+<h2 class="header">EXERCISE LIST</h2>
+<table class="exercise-table">
   <thead>
     <tr>
       <th>Date</th>
@@ -15,17 +15,17 @@
       <td><%= e.date?.toLocaleDateString()%></td>
       <td><%= e.day%></td>
       <td><%= e.bodyPart%></td>
-      <td><a href="/exercises/<%= e._id%>">DETAILS</a></td>
+      <td><a href="/exercises/<%= e._id%>" class="details-link">DETAILS</a></td>
       <td>
         <form
           action="/exercises/<%= e.id%>?_method=DELETE"
           method="POST"
-          class="delete"
+          class="delete-form"
         >
-          <button type="submit">x</button>
+          <button type="submit" class="delete-button">x</button>
         </form>
       </td>
-      <td><a href="/exercises/<%= e._id%>/edit">Edit</a></td>
+      <td><a href="/exercises/<%= e._id%>/edit" class="edit-link">Edit</a></td>
     </tr>
 
     <% })%>
