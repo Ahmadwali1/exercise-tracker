@@ -24,6 +24,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: process.env.SECRET,
+  resave:false,
+  saveUninitialized: true
+}))
+
 app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/exercises', exercisesRouter);
