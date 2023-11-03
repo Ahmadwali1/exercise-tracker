@@ -10,12 +10,11 @@ body {
 
 /* navbar*/
 .navbar {
-  background-color: radial-gradient(#ea4056, #3d2200);
-  /*background: #1b1b1b;*/
+  background: #1b1b1b;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0px;
+  padding: 10px 0;
   text-align: center;
 }
 
@@ -24,6 +23,7 @@ body {
   font-size: 18px;
   color: #f3f3f3;
   margin: 0 auto;
+  position: relative;
   transition: all 0.3s;
 }
 
@@ -102,7 +102,7 @@ body {
   transition: 700ms ease;
   font-variation-settings: "wght" 311;
   margin-bottom: 0.8rem;
-  color: rgb(243, 173, 173);
+  color: rgb(255, 255, 255);
   outline: none;
   text-align: center;
 }
@@ -207,7 +207,7 @@ form.new {
   color: #fff;
   padding: 5px 10px;
   border: 1px solid #fff;
-  margin: 5px auto;
+  margin: 0 auto;
   border-radius: 3px;
   transition: background-color 0.3s, transform 0.3s;
 }
