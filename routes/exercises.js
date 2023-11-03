@@ -3,27 +3,29 @@ var router = express.Router();
 
 const exercisesCtrl = require('../controllers/exercises');
 
+const ensureLoggedIn = require('../config/ensureLoggedIn');
+
 // Get /exercises/new
-router.get('/new', exercisesCtrl.new);
+router.get('/new',ensureLoggedIn, exercisesCtrl.new);
 
 //get /exercises/:id
-router.get('/:id', exercisesCtrl.show);
+router.get('/:id',ensureLoggedIn, exercisesCtrl.show);
 
 // post / exerciese
 
-router.post('/', exercisesCtrl.create);
+router.post('/',ensureLoggedIn, exercisesCtrl.create);
 
 //Get routes for exercises
-router.get('/', exercisesCtrl.index);
+router.get('/',ensureLoggedIn, exercisesCtrl.index);
 
 //delete /exercises/:id
-router.delete('/:id', exercisesCtrl.delete);
+router.delete('/:id',ensureLoggedIn, exercisesCtrl.delete);
 
 //get /exercises/:id/edit
-router.get('/:id/edit', exercisesCtrl.edit);
+router.get('/:id/edit',ensureLoggedIn, exercisesCtrl.edit);
 
 //Put /exercises/:id/update
-router.put('/:id', exercisesCtrl.update);
+router.put('/:id',ensureLoggedIn, exercisesCtrl.update);
 
 
 module.exports = router;
