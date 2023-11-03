@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <nav class="nav">
+    <nav class="navbar">
       <a href="/">Home</a>
       <%if (user) { %>
 
       <a href="/exercises/new">Add Exercise</a>
       <a href="/exercises">All Exercises</a>
+      <a href="/Logout">LOG OUT</a>
 
       <% } else { %>
 
@@ -21,7 +22,7 @@
 
       <% }%>
 
-      <span></span>
+      <span class="highlight"></span>
     </nav>
   </body>
 </html>
