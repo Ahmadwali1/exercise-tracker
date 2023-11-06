@@ -17,7 +17,9 @@
       <td><%= e.bodyPart%></td>
     </tr>
     <tr>
-      <td><a href="/exercises/<%= e._id%>" class="details-link">DETAILS</a></td>
+      <td>
+        <a href="/exercises/<%= e._id%>" class="details-link">ADD WORKOUTS</a>
+      </td>
       <td>
         <form
           action="/exercises/<%= e.id%>?_method=DELETE"
