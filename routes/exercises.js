@@ -6,7 +6,7 @@ const exercisesCtrl = require('../controllers/exercises');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 // Get /exercises/new
-router.get('/new', exercisesCtrl.new);
+router.get('/new',ensureLoggedIn, exercisesCtrl.new);
 
 //get /exercises/:id
 router.get('/:id',exercisesCtrl.show);
